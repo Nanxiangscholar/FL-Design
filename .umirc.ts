@@ -1,7 +1,7 @@
 import { defineConfig } from 'dumi';
 // import style from './docs/siteIndexStyle';
 
-const repo = 'Fl-Design'; // 项目名(也就是你的仓库名)
+const repo = 'FL-Design'; // 项目名(也就是你的仓库名)
 
 export default defineConfig({
   title: 'Flant Design', // 你的组件库名字
