@@ -1,0 +1,79 @@
+//index.less
+.message-wrap{
+    position: fixed;
+    left: 50%;
+    top: 60px;
+    transform: translate(-50%);
+    z-index: 1000;
+    .message{
+      position: static;
+      height: 34px;
+      min-width: 180px;
+      padding: 0px 10px;
+      font-size: 12px;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      border-radius: 4px;
+      box-shadow: 0 0 8px #ddd;
+      border: 1px solid #eee;
+      transition: all 0.3s ease;
+      background-color: #fff;
+      transition: all 0.3s ease;
+      .icon {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-right: 6px;
+      }
+    }
+    .info {
+        color: #5a98e9;
+        >.icon{
+          background: #5a98e9;
+        }
+      }
+    .error {
+      color: #ff4d4f;
+      >.icon{
+        background: #ff4d4f;
+      }
+    }
+     .warning {
+      color: #faad14;
+      >.icon{
+        background: #faad14;
+      }
+    }
+     .success {
+      color: #52c41a;
+      >.icon{
+        background: #52c41a;
+      }
+    }
+}
+
+
+.showMessage{
+  animation: show 5s ease 0s 1 normal forwards;
+}
+
+@keyframes show {
+  /*以一种写法*/
+  0% {
+      opacity: 0;
+      transform: translateY(0px);
+  }
+  5% {
+      opacity: 1;
+      transform: translateY(10px);
+  }
+  95%{
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}

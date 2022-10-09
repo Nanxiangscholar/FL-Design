@@ -1,0 +1,67 @@
+@import './config.scss';
+
+@mixin Buttonname($block) {
+    // !global 让$name 变为一个全局变量，在任意的位置都可以访问
+    $btnname: $namespace+$base-separator+$block;
+
+    .#{$btnname} {
+        min-width: 100px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        @content;
+    }
+}
+
+@mixin Noticename($block) {
+    // !global 让$name 变为一个全局变量，在任意的位置都可以访问
+    $name: $namespace+$base-separator+$block  !global;
+
+    .#{$name} {
+        @content;
+    }
+}
+
+@mixin no($type) {
+    $preSelect: &+$modifier-separator+$type;
+
+    // 解决: !global 失效问题
+    @at-root {
+        #{$preSelect} {
+            @content;
+        }
+    }
+}
+
+@mixin yno($yens) {
+    $button: &+$modifier-separator+$yens;
+
+    // 解决: !global 失效问题
+    @at-root {
+        #{$button} {
+            width: 50px;
+            height: 30px;
+            border: none;
+            border-radius: 10px;
+            color: $--color-white;
+            margin-top: 10px;
+            @content;
+        }
+    }
+}
+
+//  给弹窗父元素所使用的
+@mixin btndw($jian) {
+    $band: &+$modifier-separator+$jian;
+
+    // 解决: !global 失效问题
+    @at-root {
+        #{$band} {
+            position: fixed;
+            z-index: 10000;
+            display: flex;
+            @content;
+        }
+    }
+}

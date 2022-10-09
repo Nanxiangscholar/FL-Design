@@ -1,0 +1,102 @@
+//具体路径在配
+.fl-comment {
+    display: flex;
+    justify-content: flex-start;
+    margin: 15px 0;
+    .fl-avatar {
+        box-sizing: border-box;
+        margin-top: 15px;
+        .fl-avatar-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;               
+            }
+        }
+    }
+    .fl-comment-content {
+        align-items: center;
+        box-sizing: border-box;
+        width: 100%;
+        margin-left: 10px;
+        padding-top: 15px;
+        border-top: 1px solid #e5e9ef;
+
+        .fl-comment-content-header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            span {
+                margin-right: 20px;
+                textarea{
+                    min-width: 750px;
+                    max-width: 750px;
+                    min-height: 60px;
+                    height: 60px;
+                    outline: none;
+                    border: 1px solid #ccc;
+                    border-radius: 10px;
+                    padding: 10px;
+                    &:hover{
+                        background-color:rgb(228,228,228)
+                    }
+                    &:focus{
+                        border-color: rgb(50,93,255);
+                        background-color:rgb(255,255,255)
+                    }
+                }
+            }
+        }
+        .fl-comment-content-actions {
+            display: flex;
+            ul {
+                padding-left: 0px;
+                display: flex;
+                list-style: none;
+                li {
+                    cursor: pointer;
+                    margin-right: 15px;
+                    padding: 5px;
+                    color: rgba(0,0,0,.45098039215686275);
+                    font-size: 14px;
+                    img {                        
+                        width: 14px;
+                        height: 14px;
+                    }
+                }
+            }
+            .fl-replay-action{
+                padding-right: 25px;
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+            }
+        }
+    }
+}
+.message{
+    img{
+        width: 20px;
+    }    
+    box-sizing: border-box;
+    min-width: 180px;
+    border-radius: 4px;
+    border-width: 40px;
+    border-color: #ccc;
+    position: fixed;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    background-color: #FFF;
+    transition: opacity 0.3s, transform 0.4s, top 0.4s;
+    overflow: hidden;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#ccc;
+    z-index: 666;
+}

@@ -1,0 +1,76 @@
+@import '../themes/common/var.scss';
+
+.radioBox {
+	display: flex;
+
+	.fl-radio--square{
+		padding: 5px 12px;
+		text-align: center;
+		border: $border-base;
+		margin-left: 3px;
+
+		&~input{
+			width: 135px;
+			height: 28px;
+			outline-color: $--color-primary;
+			border: $border-base;
+			margin-left: 2px;
+		}
+	}
+
+	.fl-radio--squareDisabled{
+		color: $disabled-color;
+		background-color: $disabled-color;
+	}
+	.fl-radio--squareChecked{
+		color: $--color-white;
+		background-color: $--color-primary;
+	}
+
+	.fl-radio {
+		display: flex;
+		margin-left: 5px;
+		padding: 10px 5px;
+
+		~input{
+			width: 130px;
+			height: 16px;
+			outline: none;
+			border: $border-base;
+			margin-top: 7px;
+		}
+	}
+
+	.fl-radio--style {
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		border: $border-base;
+	}
+
+	.fl-radio-checked {
+		width: 6px;
+		height: 6px;
+		border: 6px solid $--color-primary;
+	}
+
+	.fl-radio--disabled {
+		color: $disabled-color;
+	}
+
+	span {
+		margin-left: 5px;
+		line-height: 16px;
+	}
+
+	.addRadioBox{
+		display: flex;
+
+		input:hover{
+			background-color: rgb(228,228,228);
+		}
+		
+	}
+
+
+}

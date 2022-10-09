@@ -1,0 +1,103 @@
+.fl-switch {
+    margin: 0 10px;
+  --switch-width: 40px;
+  --switch-height: 24;
+  --dot-transformX: 4px;
+  --dot-transformY: 4px;
+  --dot-size: 16px;
+  --child-transform: 42px;
+  --switch-bg: rgba(201, 205, 212, 1);
+  --disabled: pointer;
+  --opacity: 1;
+
+
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: var(--switch-width);
+  height: calc(var(--switch-height) * 1px);
+  padding: 0;
+  overflow: hidden;
+  line-height: 24px;
+  vertical-align: middle;
+  background-color: var(--switch-bg);
+  border: none;
+  border-radius: 12px;
+  cursor: var(--disabled);
+  opacity: var(--opacity);
+  transition: 0.1s linear;
+
+
+
+    // 按钮样式
+  .fl-switch-dot {
+    position: absolute;
+    top: var(--dot-transformY);
+    left: var(--dot-transformX);
+    width: var(--dot-size);
+    height: var(--dot-size);
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.1s linear;
+
+    .fl-loading{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 99999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--global-color);
+        transform: translate(-50%,-50%);
+
+        svg{
+            display: inline-block;
+            color: inherit;
+            font-style: normal;
+            vertical-align: -2px;
+            transform-origin: center center;
+            animation: fl-loading-circle 1s linear infinite;
+
+            @keyframes fl-loading-circle {
+                0%{
+                    transform: rotate(0deg);
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+  }
+  
+
+
+}
+
+// 选中时按钮样式
+.fl-switch-true{
+    --switch-bg: rgba(201,205,212,1) !important;
+    --dot-transformX: 4px !important;
+    --child-transform: 4px;
+}
+
+// 未选中时按钮样式
+.fl-switch-false{
+    --dot-transformX: 20px;
+    --switch-bg: #325DFF;
+  
+}
+// 小按钮时的样式
+.fl-switch-small{
+
+    --switch-width: 28px;
+    --switch-height: 16;
+    --dot-transformX: 14px;
+    --dot-transformY: 2px;
+    --dot-size: 12px;
+    --child-transform: 8px;
+    --switch-bg: #325DFF;
+    --disabled: pointer;
+    --opacity: 1;
+}

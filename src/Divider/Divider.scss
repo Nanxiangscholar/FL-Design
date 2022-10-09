@@ -1,0 +1,13 @@
+@import '../themes/common/var.scss';
+.fl-divider{
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    &-before,&-after{
+        flex: 1;
+        border-bottom: $border-width-base $border-style-base  $border-color-base ;
+    }
+    &-middle{
+        margin: 0 20px;
+    }
+} 

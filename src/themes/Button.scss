@@ -1,0 +1,241 @@
+@import './common/var.scss';
+@import './mixin/mixin.scss';
+@import './mixin/utils.scss';
+@import './mixin/buttonMixin.scss';
+
+@include BaseName(button){
+  // 1:为社么写这里？
+  // 清空button的默认样式
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: $--button-default-background-color;
+  border: $border-base;
+  border-color: $--button-default-border-color;
+  color: $--button-default-font-color;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 5px;
+  transition: .1s;
+  font-weight: $--button-default-font-weight;
+
+  // 为什么写这个
+  // 禁止鼠标选中文本 禁止鼠标右键点击
+  @include utils-user-select(none);
+
+  // button-size 为什么这些写,代码由来是什么
+  /*
+   1 因为 button 按钮有 大 中 小 默认;其他大小未来可以通过央视覆盖方式实现
+   2 为了降低代码重复率,所以封装为混入
+   3 因为内边距 大小 都是有统一规格的,最好通过变量引用方式白那些
+  */
+  // 设置大小，button 按钮有 大 中 小 默认 4个型号所以重复执行--＞混入
+  // @include button-size(12px,24px,14px,2px)
+  @include button-size($--button-padding-vertical, $--button-padding-horizontal, $--button-font-size, $--button-border-radius);
+  &:hover,
+  &:focus {
+    color: $--color-primary;
+    border-color: $--color-primary-light-7;
+    background-color: $--color-primary-light-9;
+  }
+
+  // 需求:既需要卸载这里, 又希望是全局选择器
+  // .fl-button--success {}
+  // &--success{}
+  // &=== .fl-button
+  // .fl-button--success
+
+// 按钮基本样式
+@include m(general){
+  color: $--button-default-font-color;
+  border-color: $border-base;
+  background-color: $--button-default-background-color;
+  &:hover,&:focus{
+    color: $--color-primary;
+    border-color: $--color-primary-light-7;
+    background-color: $--color-primary-light-9;
+  }
+}
+
+@include m(success){
+  // 方法代码重复率过高?怎么降低代码冗余
+  // ---> 创建一个新的治理
+  // 1:找相同点,和不同点;
+  // 2:不同点用形参传入
+  // 3:如果有分支用if语句写
+  color: $--color-white;
+  border-color: $--color-success;
+  background-color: $--color-success;
+  &:hover,&:focus{
+    color: $--color-white;
+    border-color: $--color-primary-success;
+    background-color: $--color-primary-success;
+  }
+}
+
+@include m(main){
+  color: $--color-white;
+  border-color: $--color-link;
+  background-color: $--color-link;
+  &:hover,&:focus{
+    color: $--color-white;
+    border-color: $--color-primary-link;
+    background-color: $--color-primary-link;
+  }
+}
+
+@include m(error){
+  color: $--color-white;
+  border-color: $--color-error;
+  background-color: $--color-error;
+  &:hover,&:focus{
+    color: $--color-white;
+    border-color: $--color-primary-error;
+    background-color: $--color-primary-error;
+  }
+}
+
+@include m(danger){
+  color: $--color-white;
+  border-color: $--color-danger;
+  background-color: $--color-danger;
+  &:hover,&:focus{
+    color: $--color-white;
+    border-color: $--color-primary-danger;
+    background-color: $--color-primary-danger;
+  }
+}
+
+@include m(info){
+  color: $--color-white;
+  border-color: $--color-info;
+  background-color: $--color-info;
+  &:hover,&:focus{
+    color: $--color-white;
+    border-color: $--color-primary-info;
+    background-color: $--color-primary-info;
+  }
+}
+
+// two 基本样式
+@include m(general-two){
+  color: $--button-default-font-color;
+  border-color: $border-base;
+  background-color: $--button-default-background-color;
+  &:hover,&:focus{
+    color: $--color-link;
+    border-color: $--color-link;
+    background-color: $--color-white;
+  }
+}
+
+@include m(success-two){
+  color:$--color-success;
+  border-color: $--color-primary-success;
+  background-color: $--color-primary-success-two;
+  &:hover,&:focus{
+    color: $--color-white;
+    border-color: $--color-success;
+    background-color: $--color-success;
+  }
+}
+
+@include m(main-two){
+  color: $--color-link;
+  border-color: $--color-primary-link;
+  background-color: $--color-primary-light-9;
+  &:hover,&:focus{
+    color: $--color-white;
+    border-color:  $--color-link;
+    background-color:  $--color-link;
+  }
+}
+
+@include m(error-two){
+  color: $--color-error;
+  border-color: $--color-primary-error;
+  background-color: $--color-primary-error-two;
+  &:hover,&:focus{
+    color: $--color-white;
+    border-color: $--color-error;
+    background-color: $--color-error;
+  }
+}
+
+@include m(danger-two){
+  color: $--color-danger;
+  border-color: $--color-primary-danger;
+  background-color: $--color-primary-danger-two;
+  &:hover,&:focus{
+    color: $--color-white;
+    border-color: $--color-danger;
+    background-color: $--color-danger;
+  }
+}
+
+@include m(info-two){
+  color: $--color-info;
+  border-color: $--color-primary-info;
+  background-color: $--color-primary-info-two;
+  &:hover,&:focus{
+    color: $--color-white;
+    border-color: $--color-info;
+    background-color: $--color-info;
+  }
+}
+
+// 按钮大小
+@include m(medium){
+  @include button-size($--button-medium-padding-vertical,$--button-medium-padding-horizontal,$--button-mini-font-size,$--button-mini-border-radius)
+}
+@include m(small){
+  @include button-size($--button-small-padding-vertical,$--button-mini-padding-horizontal,$--button-small-font-size,$--button-medium-border-radius)
+
+}
+@include m(mini){
+ @include button-size($--button-mini-padding-vertical,$--button-mini-padding-horizontal,$--button-mini-font-size,$--button-mini-border-radius)
+}
+
+// 圆形按钮
+@include then(circle){
+  border-radius: 20px;
+};
+// 按钮禁用
+@include when(disable){
+  cursor: not-allowed;
+  pointer-events: none;  // 禁用:hover属性 
+  opacity: 0.5;
+}
+}
+
+
+
+
+
+// 需求:如何抽离为一个混入,利用上 .fl-button 这个类名
+// 这个样式是不是全局,
+// .fl-button--success{
+//   color: $--color-white;
+//   border-color: $--color-success;
+//   background-color: $--color-success;
+//   &:hover,&:focus{
+//     color: $--color-success;
+//     border-color: $--color-primary-light-2;
+//     background-color: $--color-primary-light-5;
+//   }
+// }
+
+// .fl-button-error{
+//   color: $--color-white;
+//   border-color: $--color-error;
+//   background-color: $--color-error;
+//   &:hover,&:focus{
+//     color: $--color-success;
+//     border-color: $--color-primary-light-2;
+//     background-color: $--color-primary-light-5;
+//   }
+// }
+

@@ -1,0 +1,12 @@
+// 这里写一下样式工具混入指令,
+
+// 因为在很多组件中 需要禁止选中例如 loading model swiper button ...
+// 控制页面文字无法选中，禁止鼠标右键
+@mixin utils-user-select($value) {
+    -moz-user-select: $value;
+    -webkit-user-select: $value;
+    -ms-user-select: $value;
+}
+
+// 清楚浮动
+  

@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.fl-input--optDiv{
+    color: rgb(48, 47, 47);
+    z-index: 3;
+    display: none;
+    padding: 3px;
+    background-color: #fff;
+    // border: 1px solid rgb(165, 164, 164);
+    box-shadow: 0 0 8px 5px  rgba(165, 164, 164,.3);
+}
+.fl-input{
+    outline: none;
+    border: none;
+    width: 220px;
+    height: 35px;
+    padding-left: 10px;
+    background-color: transparent;
+    
+}
+.fl-input--div{
+    width: 260px;
+    height: 37px;
+    border: 1px solid rgb(165, 164, 164);
+    margin-top: 10px;
+
+}
+.fl-input:hover{
+    // background-color:rgb(165, 164, 164);
+
+}
+
+.fl-input--div:hover{
+    background-color:rgba(165, 164, 164,.3);
+    
+}
+.fl-input--div span{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    line-height: 12px;
+background-color: rgba(165, 164, 164,.4);
+text-align: center;
+border-radius: 50%;
+
+}
+.fl-input--option{
+padding: 5px 0;
+
+}
+.fl-input--option:hover {
+color: blue;
+}

@@ -1,0 +1,103 @@
+@import './common/var.scss';
+@import './mixin/mixin.scss';
+@import './mixin/utils.scss';
+@import './common/animaltion.scss';
+
+// 键设置样式
+.btns {
+    display: inline-block;
+    margin-left: 10px;
+    .fl-btn{
+        @include btndw(topLeft) {
+            flex-direction: column;
+            left: 0px;
+            top: 20px;
+        }
+    
+        @include btndw(topRight) {
+            flex-direction: column;
+            right: 0px;
+            top: 20px;
+        }
+    
+        @include btndw(bottomLeft) {
+            flex-direction: column-reverse;
+            left: 0px;
+            bottom: 20px;
+        }
+    
+        @include btndw(bottomRight) {
+            flex-direction: column-reverse;
+            right: 0px;
+            bottom: 20px;
+        }
+    }
+    @include Buttonname(btnnotice) {
+        @include no(info) {
+            background-color: $--color-link;
+            color: $--color-white;
+        }
+
+        @include no(success) {
+            background-color: $--color-success;
+            color: $--color-white;
+        }
+
+        @include no(warning) {
+            background-color: $--color-danger;
+            color: $--color-white;
+        }
+
+        @include no(error) {
+            background-color: $--color-error;
+            color: $--color-white;
+        }
+
+        @include no(normal) {
+            background-color: $--color-info;
+            color: $--color-white;
+        }
+
+        @include no(loading) {
+            background-color: $--color-danger;
+            color: $--color-info;
+        }
+    }
+}
+
+
+// 弹出框设置样式
+@include Noticename(notice) {
+    min-width: 250px;min-height: 50px;
+    border-radius: 4px;
+    border-width: 40px;
+    border: 1px solid $--color-info;
+    background-color: $--color-white;
+    color: $--color-black;
+    transform: scale(0);
+    overflow: hidden;
+    padding: 25px 15px;
+    font-size: 18px;
+    opacity: 0;
+    animation-name: tckdh;
+    animation-duration: 5s;
+    margin:5px 0;
+    div {
+        vertical-align: top;
+    }
+    p {
+        margin: 0 0 0 40px;
+    }
+    // 按钮设置
+    @include yno(no) {
+        margin-left: 50px;
+        background-color: $--color-info;
+    }
+
+    @include yno(yes) {
+        background-color: $--color-link;
+        margin-left: 10px;
+    }
+}
+
+

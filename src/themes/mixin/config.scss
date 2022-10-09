@@ -1,0 +1,7 @@
+// 该文件解决统一命名问题
+$name-space:'fl'; // 组件库样式的标识
+$base-separator:'-'; // 命名空间与元素分隔符 例如: fl-button  fl-form
+$element-separstor:'_'; // 元素分隔符
+$modifier-separator:'--'; // 修饰分隔符,添加样式命名用修饰分隔符
+$state-prefix:'is-'; // 状态前缀
+

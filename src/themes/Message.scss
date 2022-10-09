@@ -1,0 +1,12 @@
+@import './common/var.scss';
+@import './mixin/mixin.scss';
+@import './mixin/buttonMixin.scss';
+@import './mixin/config.scss';
+
+
+@include b(message){
+
+    @include when(){
+        
+    }
+}

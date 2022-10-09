@@ -1,0 +1,79 @@
+@import '../themes/common/var.scss';
+*{
+    margin: 0;
+    padding: 0;
+}
+.fl-layout{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: mix($--color-black,$--color-white,10%);
+    &-transverse{
+        display: flex;
+    }
+    &-head,&-footer,&-content,&-slider{
+        padding: 20px 0;
+    }
+    &-head,&-footer{
+        background-color: mix($--color-link,$--color-success, 75%);
+    }
+    &-content{
+        background-color:$--color-link;
+    }
+    &-slider{
+        background-color:mix($--color-link,$--color-success, 90%);
+        ul{
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+        }
+    }
+    &-header{
+        display: flex;
+        align-items: center;
+        padding: 0px 24px;
+        background-color: mix($--color-black,$--color-white,90%);
+        &-headline{
+            display: flex;
+            list-style: none;
+            cursor: pointer;
+            li{
+                padding: 0 20px;
+                height: 63px;
+                line-height: 63px;
+                color: $--color-white;
+            }
+            li:hover{
+                background-color: mix($--color-link,$--color-success, 90%);
+            }
+        }
+    }
+    &-side-list{
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        min-height: 280px;
+        background-color: mix($--color-black,$--color-white,90%);
+        .fl-layout-list{
+            padding: 0;
+            margin: 0;
+            li{
+                list-style: none;
+                height: 40px;
+                line-height: 40px;
+                color: $--color-white;
+                text-align: center;
+            }
+            li:hover{
+                background-color: mix($--color-link,$--color-success, 90%);
+            } 
+        }
+    }
+    &-logo{
+        float: left;
+        width: 120px;
+        height: 31px;
+        margin: 16px 24px 16px 0;
+        background: mix($--color-black,$--color-white,60%);
+    }
+}

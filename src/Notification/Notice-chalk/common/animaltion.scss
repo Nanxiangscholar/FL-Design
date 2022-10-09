@@ -1,0 +1,20 @@
+// 这里解决动画问题
+
+@keyframes tckdh {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    10% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    90% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}

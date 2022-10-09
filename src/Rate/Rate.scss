@@ -1,0 +1,25 @@
+
+.current{
+    color: #f6dd06;
+}
+.rate-box{
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 5px;
+    svg{
+        &:hover{
+            
+            transform: scale(1.3);
+            transition: all 0.2s ;
+
+        }
+    }
+}
+.text{
+    vertical-align: top;
+    
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 5px;
+    font-size: 18px;
+}

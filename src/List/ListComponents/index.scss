@@ -1,0 +1,96 @@
+
+@import './var.scss';
+// 默认样式
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.fl-list{
+    font-size: 16px;
+    width: 600px;
+    border: $border;
+    margin: 0 auto;
+}
+.fl-list-title{
+    padding: 12px 20px;
+    font-size: 16px;
+}
+
+.fl-list-item-default-more{
+    color: #333;
+    border-top: $border;
+    font-size: 14px;
+    padding: 13px 20px;
+    display: flex;
+    align-items: center;
+}
+.fl-list-item-default-lazyload{
+    height: $lazyloadHeight;
+    overflow: scroll;
+    overflow-X: scroll;
+    overflow-Y: scroll;
+}
+.fl-list-item-default-virtualList{
+    height: $virtualListHeight;
+    overflow: scroll;
+    overflow-X: scroll;
+    overflow-Y: scroll;
+}
+// 不同尺寸大小
+.fl-app-size{
+    padding: 12px 0px;
+    font-size: 16px;
+}
+.fl-app-size span{
+    padding: 0 12px;
+    cursor: pointer;
+}
+// 选中样式
+.active-size-bar{
+    padding: 0 12px;
+    color: #325dff;
+    font-size: 14px;
+    cursor: pointer;
+}
+// default
+.fl-list-item-default{
+    color: #333;
+    border-top: $border;
+    font-size: 14px;
+    padding: 12px 20px;
+}
+// big
+.fl-list-item-big{
+    color: #333;
+    border-top: $border;
+    font-size: 14px;
+    padding: 16px 20px;
+}
+// small
+.fl-list-item-small{
+    color: #333;
+    border-top:$border;
+    font-size: 14px;
+    padding: 8px 20px;
+}
+
+// 小标签 Avatar
+.fl-list-item-concis-avatar{
+    width: 40px;
+    height: 40px;
+    font-size: 13.3333px;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    background-color: #c9cdd4;
+}
+.fl-list-item-text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}

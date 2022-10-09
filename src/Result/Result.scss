@@ -1,0 +1,18 @@
+.fl-result{
+    text-align: center;
+    .fl-result-icon{
+        svg{
+            font-size: 72px;
+        }
+    }
+    .fl-result-title{
+        font-size: 24px;
+    }
+    .fl-result-subtitle{
+        color: #00000073;
+        font-size: 14px;
+        line-height: 1.6;  
+        margin-top: -12px;
+        margin-bottom: 32px;  
+    }
+}

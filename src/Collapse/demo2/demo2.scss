@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.lists {
+    width: 820px;
+    height: auto;
+
+    .li-father {
+        border-bottom: 1px solid #ebeef5;
+        align-items: center;
+        height: 48px;
+        line-height: 48px;
+        background-color: #fff;
+        color: #303133;
+        cursor: pointer;
+        font-size: 14px;
+        overflow: hidden;
+        transition: all 0.2s linear;
+        li{
+            position: relative;
+            height: 48px;
+        line-height: 48px;
+        span{
+            transition: all 0.2s linear;
+            transform-origin:center;
+            position: absolute;
+            left: 780px;
+        }
+        }
+        div{
+            height: 24px;
+        line-height: 24px;
+        }
+    }
+}

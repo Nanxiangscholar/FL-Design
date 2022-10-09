@@ -1,0 +1,50 @@
+@import "./mixin.scss";
+@import './config.scss';
+@import './var.scss';
+
+
+// 初始样式
+@include baseName(Collapse){
+    width: $--Collapse-width;
+    margin: 0 auto;
+    background-color: $--color-white;
+    border: $--border;
+    border-radius: $--border-radius;
+}
+ul{
+    margin: 0 auto;
+    margin-top: $--margin-top;
+    li p{
+        margin-top: $--margin-top;
+        height: $--Collapse-ul-li-p-height;
+        background-color: $--background-color;
+        list-style: none;
+        line-height: $--line-height;
+        padding:$--padding;
+        border-bottom: $--border;
+        span:nth-child(2){
+            margin-left: 20px;
+        }
+    }
+    li .dis{
+        cursor:not-allowed;
+        background-color: $--color-white;
+        color: $--color;
+    }
+    li div{
+        padding:$--padding;
+        overflow: hidden;
+        transition: all 0.3s linear;
+    }
+    li div span{
+        display: block;
+        font-size: $--font-size;
+        margin-top: $--margin-top;
+    }
+    li .lis{
+       height: 0;
+    }
+    li .ull{
+        height:100px ;
+    }
+}

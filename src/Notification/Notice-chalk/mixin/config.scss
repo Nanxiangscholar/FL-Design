@@ -1,0 +1,6 @@
+// 解决是统一命名的问题
+$namespace: 'fl'; // 组件库样式的标识，
+$base-separator:'-';// 命名空间与元素分隔符  例如 fl-button fl-form 
+$element-separator: '__'; // 元素分割符号
+$modifier-separator: '--'; // 修饰分割符号,【添加样式命名用修饰分割术】
+$state-prefix: 'is-'; // 状态前缀

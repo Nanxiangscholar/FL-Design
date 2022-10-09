@@ -1,0 +1,16 @@
+.btn1{
+    width: 100px;
+    height: 30px;
+}
+.CContent{
+    /* background-color: aqua; */
+    z-index: 9;
+    color: black;
+}
+.box1{
+    background-color: rgb(240, 237, 233);
+    width: 210px;
+    height: 180px;
+    /* position: relative; */
+    /* top: -190px; */
+}

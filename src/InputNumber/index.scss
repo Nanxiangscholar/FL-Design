@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+tbody{
+    text-align: center;
+}
+.fl-inputNumber {
+    width: 180px;
+    height: 40px;
+    display: inline-block;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+
+    input {
+        width: 174px;
+        height: 38px;
+        padding: 0 50px;
+        outline: none;
+        border-radius: 5px;
+        text-align: center;
+        border: none;
+
+    }
+
+    span {
+        display: inline-block;
+        width: 40px;
+        height: 37px;
+        position: absolute;
+        top: 1px;
+        text-align: center;
+        line-height: 35px;
+        font-size: 22px;
+        font-weight: 100;
+        background-color: rgb(245,247,250);
+        user-select:none;
+    }
+    &:hover{
+       
+        border: 1px solid #409eff;
+    }
+    span:hover {
+        color: #409eff;
+    }
+}
+
+.fl-input-decrease {
+    left: 1px;
+    border-radius: 4px 0 0 4px;
+    border-right: 1px solid #dcdfe6;
+}
+
+.fl-input-increase {
+    right: 1px;
+    border-radius:0 4px 4px 0;
+    border-left: 1px solid #dcdfe6;
+}

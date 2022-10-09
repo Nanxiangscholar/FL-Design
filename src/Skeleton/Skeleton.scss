@@ -1,0 +1,185 @@
+@import '../themes/common/var.scss';
+
+*{
+  margin: 0;
+  padding: 0;
+}
+.fl-concis-switch {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: var(--switch-width);
+  height: calc(var(--switch-height) * 1px);
+  padding: 0;
+  overflow: hidden;
+  line-height: 24px;
+  vertical-align: middle;
+  background-color: var(--switch-bg);
+  border: none;
+  border-radius: 12px;
+  cursor: var(--disabled);
+  opacity: var(--opacity);
+  transition: 0.1s linear;
+
+  --switch-width: 40px;
+  --switch-height: 24;
+  --dot-transformX: 4px;
+  --dot-transformY: 4px;
+  --dot-size: 16px;
+  --child-transform: 42px;
+  --switch-bg: rgba(201, 205, 212, 1);
+  --disabled: pointer;
+  --opacity: 1;
+
+  .fl-concis-switch-dot {
+    position: absolute;
+    top: var(--dot-transformY);
+    left: var(--dot-transformX);
+    width: var(--dot-size);
+    height: var(--dot-size);
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.1s linear;
+  }
+}
+
+
+
+.fl-switch-true {
+  --dot-transformX: 20px;
+  
+  --switch-bg: #325dff;
+}
+.fl-switch-false {
+  --dot-transformX: 4px;
+  --switch-bg: rgba(201, 205, 212, 1);
+}
+
+.fl-concis-list {
+  .fl-concis-skeleton {
+    display: flex;
+    padding: 15px;
+    // 隐藏时的样式
+    .fl-concis-skeleton-avatar {
+      position: relative;
+      z-index: 1;
+      width: var(--skeleton-container-avatar-size);
+      height: var(--skeleton-container-avatar-size);
+      overflow: hidden;
+      background: #e0e0e0;
+      border-radius: 50%;
+      height: 40px;
+      width: 38px;
+
+      // 闪白
+      &::after {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          hsla(0, 0%, 100%, 0),
+          hsla(0, 0%, 100%, 0.5),
+          hsla(0, 0%, 100%, 0)
+        );
+        // animation: concis-skeleton-transform 3s linear infinite normal;
+        animation: move 1.2s ease infinite;
+        content: "";
+
+        @keyframes move {
+          0% {
+            left: -100%;
+          }
+          100% {
+            left: 100%;
+          }
+        }
+      }
+    }
+
+    .fl-concis-skeleton-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-left: 12px;
+      & > div {
+        position: relative;
+        z-index: 1;
+        height: 14px;
+        margin-bottom: 14px;
+        overflow: hidden;
+        background: #e0e0e0;
+        border-radius: 10px;
+      }
+      & > div::after {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          hsla(0, 0%, 100%, 0),
+          hsla(0, 0%, 100%, 0.5),
+          hsla(0, 0%, 100%, 0)
+        );
+        // animation: concis-skeleton-transform 3s linear infinite normal;
+        animation: move 1.2s ease infinite;
+        content: "";
+
+        @keyframes move {
+          0% {
+            left: -100%;
+          }
+          100% {
+            left: 100%;
+          }
+        }
+      }
+
+      .fl-concis-skeleton-container-title {
+        width: 50%;
+      }
+      .fl-concis-skeleton-container-cont{
+        display: none;
+      }
+    }
+  }
+}
+
+.fl-concis-skeleton {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 13px 20px;
+  border-top: 1px solid #e5e6eb;
+  color: #fff;
+  text-align: center;
+  line-height: 36px;
+  // 显示时的样式
+  .fl-concis-avatar {
+    background: rgb(50, 93, 255);
+    width: 40px;
+    height: 40px;
+    font-size: 13.3333px;
+    border-radius: 5px;
+  }
+  .fl-concis-text {
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 300;
+    .fl-concis-text-title{
+      font-size: 14px;
+     
+    }
+  }
+}

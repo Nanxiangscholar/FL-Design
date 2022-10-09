@@ -1,0 +1,42 @@
+
+// 自定义设置button按钮的大小
+// $padding-vertical  上下边框
+// $padding-horizontal  左右内边距
+// $font-size 字体大小
+// $border-radius 圆角大小
+
+
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $border-radius) {
+    padding: $padding-vertical $padding-horizontal;
+    font-size: $font-size;
+    border-radius: $border-radius;
+    &.is-round {
+      padding: $padding-vertical $padding-horizontal;
+    }
+}
+
+
+/*引用了别人封装*/
+@mixin button-variant($color, $background-color, $border-color) {
+  color: $color;
+  background-color: $background-color;
+  border-color: $border-color;
+
+  &:focus,
+  &:hover {
+    background: mix($--color-white, $background-color, $--button-hover-tint-percent);
+    border-color: mix($--color-white, $border-color, $--button-hover-tint-percent);
+    color: $color;
+  }
+}
+// 我们自己封装的，可以使用，需要注释调 下面的button-variant
+// @mixin  button-variant($a,$b,$c) {
+//    color: $a;
+//    border-color: $b;
+//    background-color: $c;
+//    &:hover,&:focus { // 颜色运算没有郭泽
+//      color: mix($a,$b,80%);
+//      border-color: $b;
+//      background-color: mix($a,$c,30%);
+//    }
+// }

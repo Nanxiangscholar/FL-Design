@@ -1,0 +1,84 @@
+.fl-select {
+    width: 200px;
+    position: relative;
+
+    &:hover .fl-select-input {
+        border: 1px solid #325DFF;
+    }
+
+    .fl-select-ipt {
+        width: 200px;
+        display: flex;
+        cursor: pointer;
+
+        .fl-select-input {
+            cursor: pointer;
+            padding: 6px 15px 6px;
+            outline: none;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            color: #515151;
+            position: relative;
+        }
+        .fl-select-input-show{
+            cursor: not-allowed;
+        }
+        .fl-select-img {
+            width: 12px;
+            height: 30px;
+            position: absolute;
+            left: 88%;
+            z-index: 1;
+        }
+        .is-disable{
+            cursor: not-allowed;
+        }
+        .is-loading{
+            cursor: not-allowed;
+            background-image: url('../Select/img/loading.svg');
+            background-size: 12px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    
+    .neimu {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .fl-select-opt {
+        cursor: pointer;
+        width: 200px;
+        position: absolute;
+        top: 40px;
+        background-color: #fff;
+        z-index: 999;
+        box-shadow: 0 0 10px 0 #ccc;
+
+        .fl-select-option {
+            padding: 6px 8px;
+            font-size: 14px;
+            color: rgb(152, 151, 151);
+
+            &:hover {
+                color: #325DFF;
+                font-weight: 500;
+            }
+
+        }
+        .is-disable{
+            background-color: #a4a0a0b5;
+            &:hover{
+                color: rgb(152, 151, 151);
+                font-weight: 400;
+                cursor: not-allowed;
+            }
+        }
+    }
+}

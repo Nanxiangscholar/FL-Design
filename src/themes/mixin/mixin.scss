@@ -1,0 +1,58 @@
+@import './config.scss';
+
+// BaseName 基础命名
+@mixin BaseName($block){
+    $name:$name-space+$base-separator+$block !global;
+    .#{$name}{
+        @content;
+    }
+}
+
+// 为什么写m指令 解决了哪些问题????
+@mixin m($type){
+    //bug >>>> 注意: 作为子沦入指令,!global 失效,应该用@at-ro  ot
+    $currentSelect:'' ;// 求得到的选择器
+    $preSelect:&;
+    // $preSelect:'.fl-button';
+    // .fl-button--success
+    // $modifier-separator:'--'
+    // & == .fl-button
+    // $currentSelect:#{$currentSelect + $preSelect+$modifier-separator+$type}; 
+
+
+    // 多个值的问题 :例如:success ligt1
+    // 循环第一次: .fl-button--success
+    // 循环第二次 .fl-button--success.fl-button--light1
+   
+    // 功能支持并集选择器.
+    @each $unim in $type {
+        $currentSelect:$currentSelect + $preSelect+$modifier-separator+$unim 
+    }
+    // .fl-button--success
+
+    // 解决: !global 失效问题
+    @at-root {
+        #{$currentSelect} {
+            @content;
+        }
+    }
+ 
+
+}
+
+// 圆角
+@mixin then($state) {
+    @at-root {
+      &.#{$state-prefix + $state} {
+        @content;
+      }
+    }
+}
+
+@mixin when($state) {
+    @at-root {
+      &.#{$state-prefix + $state} {
+        @content;
+      }
+    }
+}

@@ -1,0 +1,20 @@
+
+
+@mixin baseName($block) {
+    $name:$namespace+$base-separator+$block !global;
+    .#{$name}{
+        @content;
+    }
+}
+// @mixin name($type) {
+//     $currentSelect:'' ;
+//     $preSelect:&;
+//     @each $unim in $type {
+//         $currentSelect:$currentSelect + $preSelect+$modifier-separator+$unim 
+//     }
+//     @at-root {
+//         #{$currentSelect} {
+//             @content;
+//         }
+//     }
+// }

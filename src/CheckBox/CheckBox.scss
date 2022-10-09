@@ -1,0 +1,17 @@
+$color: #666;
+$vertical-align: middle;
+$input-margin-right: 5px;
+.fl-checkBox {
+    color: $color;
+    margin-right: 10px;
+}
+input {
+    vertical-align: $vertical-align;
+    margin-right: $input-margin-right;
+}
+.fl-checkBoxGroup-one,.fl-checkBoxGroup-two {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+

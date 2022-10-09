@@ -1,0 +1,170 @@
+// @import '../../themes-chalk/mixin/config.scss';
+
+* {
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/*
+ button-size()
+ 作用：自定义设置button按钮的大小。通过内编辑 文本字体 边框圆角等方式设置大小
+ $padding-vertical 上下边距
+ $padding-horizontal 左右内边距
+ $font-size  设置字体大小
+  $border-radius 边框圆角了
+*/
+@mixin tableHead-width($block) {
+    // !global 让$name 变为一个全局变量，在任意的位置都可以访问
+    $name: $block;
+
+    #{$name} {
+        @content;
+    }
+}
+
+@include tableHead-width('td, th') {
+    padding: 10px 30px;
+    text-align: left;
+}
+
+@include tableHead-width(tr) {
+    height: 40px;
+    border: 1px solid #e5e5e6;
+}
+
+@include tableHead-width('.table') {
+    display: inline-block;
+
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+@include tableHead-width('.concis-input') {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &>.input {
+        box-sizing: border-box;
+        padding: 4px 18px 4px 11px;
+        color: rgba(0, 0, 0, .8509803921568627);
+        font-size: 14px;
+        line-height: 1.5715;
+        background-color: #fff;
+        border: 1px solid #d9d9d9;
+        border-radius: 2px;
+        outline: none;
+        transition: all .3s;
+    }
+}
+
+@include tableHead-width('.search-btn') {
+    overflow: scroll;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    transition: all 0.1s linear 0s;
+}
+
+@include tableHead-width('.search-btn1') {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin-left: 24px;
+    color: #fff;
+    background: #325dff;
+    cursor: pointer;
+}
+
+@include tableHead-width('.anticon-search') {
+    width: 24px;
+    height: 40px;
+    margin-left: 10px;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: .2s linear;
+
+    &:hover {
+
+        background-color: #c9cdd4;
+
+    }
+}
+
+@include tableHead-width('.title') {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &>span:nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
+        float: left;
+        margin-left: 10px;
+        color: #a9adb2;
+        cursor: pointer;
+
+        &>svg {
+            font-size: 12px;
+        }
+
+        &>:hover {
+            color: #666a6d;
+        }
+
+        &>:focus {
+            color: rgb(50, 93, 255);
+        }
+    }
+}
+
+.concis-pagination {
+
+    .concis-pagination-numberBox,
+    .concis-pagination-prev,
+    .concis-pagination-next,
+    .concis-select {
+        color: #c0c4cc;
+
+        min-width: 30px;
+        height: 30px;
+        margin: 0 5px;
+        font-size: 14px;
+        line-height: 30px;
+        text-align: center;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+.concis-dark-select .selected,
+.concis-select .selected {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 5px;
+    background: #fff;
+    color: #c0c4cc;
+}
+
+.concis-pagination-jumpBox {
+    color: #c0c4cc;
+}
+
+.concis-dark-pagination-jumpBox-jump,
+.concis-pagination-jumpBox-jump {
+    width: 40px;
+    height: 25px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline-color: var(--global-color);
+    transition: .2s linear;
+}

@@ -1,0 +1,158 @@
+// 这里是全局变量文件
+
+/* Color
+-------------------------- */
+$--color-white: #ffff !default;
+$--color-black: #000;
+
+// 全局基础颜色 
+$--color-primary: #1890ff !default; // 全局主色
+
+$--color-link: #1890ff !default; // 链接色
+$--color-success: #52c41a !default; // 成功色
+$--color-danger: #faad14 !default; // 警告色
+$--color-error: #f5222d !default; // 错误色
+$--color-info: #909399 !default;  
+
+
+// primary 亮色系列的9个维度
+$--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default; /* 53a8ff */
+$--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default; /* 66b1ff */
+$--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default; /* 79bbff */
+$--color-primary-light-4: mix($--color-white, $--color-primary, 40%) !default; /* 8cc5ff */
+$--color-primary-light-5: mix($--color-white, $--color-primary, 50%) !default; /* a0cfff */
+$--color-primary-light-6: mix($--color-white, $--color-primary, 60%) !default; /* b3d8ff */
+$--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default; /* c6e2ff */
+$--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default; /* d9ecff */
+$--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default; /* ecf5ff */
+
+// color-text
+/// color|1|Font Color|2
+$--color-text-primary: #303133 !default;
+/// color|1|Font Color|2
+$--color-text-regular: #606266 !default;
+/// color|1|Font Color|2
+$--color-text-secondary: #909399 !default;
+/// color|1|Font Color|2
+$--color-text-placeholder: #C0C4CC !default;
+/// color|1|Border Color|3
+
+
+/* 基础字号大小 */
+$font-size-base: 14px; // 主字号
+$heading-color: rgba(0, 0, 0, 0.85); // 标题色
+$text-color: rgba(0, 0, 0, 0.65); // 主文本色
+$text-color-secondary: rgba(0, 0, 0, 0.45); // 次文本色
+$disabled-color: rgba(0, 0, 0, 0.25); // 失效色
+
+
+// font-weight;
+$font-weight-primary: 500 !default;
+$font-weight-secondary: 100 !default;
+
+
+// border-base
+$border-radius-base: 4px; // 组件/浮层圆角
+$border-color-base: #d9d9d9; // 边框色\
+$border-width-base: 1px !default;
+$border-style-base: solid !default;
+$border-base: $border-width-base $border-style-base  $border-color-base ;
+
+/* border-color */
+/// color|1|Border Color|3
+$--border-color-light: #E4E7ED !default;
+/// color|1|Border Color|3
+$--border-color-lighter: #EBEEF5 !default;
+/// color|1|Border Color|3
+$--border-color-extra-light: #F2F6FC !default;
+
+$box-shadow-base: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+  0 9px 28px 8px rgba(0, 0, 0, 0.05); // 浮层阴影
+
+
+/** Button */
+
+$--button-padding-vertical: 12px !default;
+$--button-padding-horizontal: 20px !default;
+$--button-font-size: $font-size-base !default;
+$--button-border-radius: $border-radius-base !default;
+$--button-font-weight: $font-weight-primary !default;
+
+/* type */
+// default
+$--button-default-background-color: $--color-white !default;
+$--button-default-border-color:$border-color-base !default;
+$--button-default-font-color: $text-color;
+$--button-default-font-weight:$font-weight-primary;
+$--button-default-font-size: $font-size-base;
+
+// success
+$--button-success-border-color: $--color-success !default;
+$--button-success-font-color: $--color-white !default;
+$--button-success-background-color: $--color-success !default;
+$--button-success-font-weight:$font-weight-primary;
+$--button-success-font-size: $font-size-base;
+
+// error
+$--button-error-border-color: $--color-error !default;
+$--button-error-font-color: $--color-white !default;
+$--button-error-background-color: $--color-error !default;
+
+// danger
+// /// color||Color|0
+$--button-danger-border-color: $--color-danger !default;
+$--button-danger-font-color: $--color-white !default;
+$--button-danger-background-color: $--color-danger !default;
+
+// info
+$--button-info-border-color: $--color-info !default;
+$--button-info-font-color: $--color-white !default;
+$--button-info-background-color: $--color-info !default;
+
+// primary
+$--button-primary-border-color: $--color-primary !default;
+$--button-primary-font-color: $--color-white !default;
+$--button-primary-background-color: $--color-primary !default;
+
+
+/* size */
+
+// medium
+/// fontSize||Font|1
+$--button-medium-font-size: $font-size-base !default;
+/// borderRadius||Border|2
+$--button-medium-border-radius: $border-radius-base !default;
+/// padding||Spacing|3
+$--button-medium-padding-vertical: 10px !default;
+/// padding||Spacing|3
+$--button-medium-padding-horizontal: 20px !default;
+
+// small
+/// fontSize||Font|1
+$--button-small-font-size: 12px !default;
+$--button-small-border-radius: #{$border-radius-base - 1} !default;
+/// padding||Spacing|3
+$--button-small-padding-vertical: 9px !default;
+/// padding||Spacing|3
+$--button-small-padding-horizontal: 15px !default;
+
+// mini
+/// font-size||Font|1
+$--button-mini-font-size: 12px !default;
+$--button-mini-border-radius: #{$border-radius-base - 1} !default;
+/// padding||Spacing|3
+$--button-mini-padding-vertical: 7px !default;
+/// padding||Spacing|3
+$--button-mini-padding-horizontal: 15px !default;
+
+
+
+/* disable */
+/// color||Color|0
+$--button-disabled-font-color: $--color-text-placeholder !default;
+/// color||Color|0
+$--button-disabled-background-color: $--color-white !default;
+/// color||Color|0
+$--button-disabled-border-color: $--border-color-lighter !default;
+
+$--button-hover-tint-percent: 20% !default;
