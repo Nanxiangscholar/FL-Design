@@ -1,5 +1,5 @@
 ---
-title: List 列表 副本
+title: List 列表
 nav:
   title: 组件
   path: /common
