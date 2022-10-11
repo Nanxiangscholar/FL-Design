@@ -54,5 +54,5 @@ yarn add Flunt
 感谢各位开发者做出的贡献
 
 <a href="https://github.com/Nanxiangscholar/FL-Design/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Nanxiangscholar/FL-Design?columns={10}" />
+  <img src="https://contrib.rocks/image?repo=Nanxiangscholar/FL-Design?columns=10" />
 </a>
