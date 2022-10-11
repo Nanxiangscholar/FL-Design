@@ -5,7 +5,7 @@ export default function BackTop({ children, duration, target, visibilityHeight }
 
     const [targe,setTarge]=useState(target);
 
-    // 得到返回顶部所需的时间
+    // 得到返回顶部所需的时间…………
     const newduration = duration ? duration / 10 : 100;
     // 到滚动距离大于该参数时才会显示按钮
     const newvisibilityHeight = visibilityHeight ? visibilityHeight : 200;

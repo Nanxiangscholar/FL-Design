@@ -1,6 +1,6 @@
 # 👇👇看这里👇👇
 
-## 教程
+## 教程看世立
 
 ### 1.克隆仓库到本地
 
@@ -30,7 +30,7 @@
    - 如果遇到错误`error: fsmonitor--daemon failed to start`见下文备注
 
 3. `git commit -m "提交描述信息"`      将暂存区文件上传到仓库
-4. `git push origin main`      上传仓库到远程仓库，注意此时远程仓库是没有实时更新你修改的代码的！
+4. `git push origin main `      上传仓库到远程仓库，注意此时远程仓库是没有实时更新你修改的代码的！
 
 ### 4.提交Pr
 
