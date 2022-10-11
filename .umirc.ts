@@ -6,9 +6,9 @@ const repo = 'FL-Design'; // 项目名(也就是你的仓库名)
 export default defineConfig({
   title: 'Flant Design', // 你的组件库名字
   // 你的网站 tabs 图片
-  favicon: 'https://s12.aconvert.com/convert/p3r68-cdx67/afg63-mkkr9.jpg',
+  favicon: 'https://s1.328888.xyz/2022/10/11/gZpEj.png',
   // 你的官网logo
-  logo: 'https://s12.aconvert.com/convert/p3r68-cdx67/afg63-mkkr9.jpg',
+  logo: 'https://s1.328888.xyz/2022/10/11/gZpEj.png',
   outputPath: 'docs-dist',
   mode: 'site',
   apiParser: {
