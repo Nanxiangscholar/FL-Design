@@ -4,7 +4,7 @@ import { defineConfig } from 'dumi';
 const repo = 'FL-Design'; // 项目名(也就是你的仓库名)
 
 export default defineConfig({
-  title: 'Flant Design', // 你的组件库名字
+  title: 'Fluent design', // 你的组件库名字
   // 你的网站 tabs 图片
   favicon: 'https://s1.328888.xyz/2022/10/11/gZpEj.png',
   // 你的官网logo
@@ -29,15 +29,15 @@ export default defineConfig({
   navs: [
     null,
     {
-      title: '南巷书生',
+      title: '作者',
       children: [
         {
-          title: 'CSDN',
-          path: 'https://blog.csdn.net/qq_58459674?spm=1000.2115.3001.5343',
+          title: 'My_Blog',
+          path: 'https://nanxiangscholar.github.io/',
         },
         {
-          title: '掘金',
-          path: 'https://juejin.cn/user/1785262616087192',
+          title: 'csdn',
+          path: 'https://blog.csdn.net/qq_58459674?spm=1000.2115.3001.5343',
         },
       ],
     },
