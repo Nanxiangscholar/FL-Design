@@ -25,7 +25,7 @@ export default defineConfig({
   history: {
     type: 'hash',
   },
-  // 配置你想配置一级导航
+  // 配置你想配置一级导航.
   navs: [
     null,
     {
