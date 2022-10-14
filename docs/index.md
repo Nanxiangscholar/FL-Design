@@ -7,7 +7,7 @@ hero:
       link: /components
     - text: 开箱即用
       link: /common
-footer: FL Design 测试阶段 | Copyright © 2022<br />Powered by [dumi](https://d.umijs.org)
+footer: Fluent Design 测试阶段 | Copyright © 2022<br />Powered by [dumi](https://d.umijs.org)
 ---
 
 <code src="./components/Flex" inline="true"></code>
