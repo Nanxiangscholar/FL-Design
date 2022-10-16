@@ -46,12 +46,23 @@ yarn add Flunt
 ```
 
 ## 🔨 Usage
+```js
+import React from 'react'
+import BackTop from '../index.tsx'
+export default function index1() {
+  return (
+    <>
+      <div>让滚动条飞一会儿</div>
+      {/* 传入子标签 作为点击元素 */}
+      <BackTop visibilityHeight={200} ></BackTop>
+    </>
+  )
+}
+```
 
-...
 
 ## 贡献者
-
-感谢各位开发者做出的贡献(非全部)
+- 感谢各位开发者做出的贡献(非全部)
 
 <a href="https://github.com/Nanxiangscholar/FL-Design/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Nanxiangscholar/FL-Design" />
