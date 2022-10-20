@@ -6,9 +6,9 @@ const repo = 'FL-Design'; // 项目名(也就是你的仓库名)
 export default defineConfig({
   title: 'Fluent design', // 你的组件库名字
   // 你的网站 tabs 图片
-  favicon: 'https://s1.328888.xyz/2022/10/11/gZpEj.png',
+  favicon: 'https://pic1.imgdb.cn/item/63515c0816f2c2beb1e5525f.png',
   // 你的官网logo
-  logo: 'https://s1.328888.xyz/2022/10/11/gZpEj.png',
+  logo: 'https://pic1.imgdb.cn/item/63515c0816f2c2beb1e5525f.png',
   outputPath: 'docs-dist',
   mode: 'site',
   apiParser: {
