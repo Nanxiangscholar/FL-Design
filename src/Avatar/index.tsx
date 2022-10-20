@@ -4,9 +4,6 @@ import { avatarProps } from './Avatar';
 export default function Avatar({children,style,size,shape,autoFixFontSize,triggerType,triggerIcon,triggerClick,groupStyle}:avatarProps) {
   let Props =[
     children,
-    // style = {
-
-    // },
     size =size,
     shape,
     autoFixFontSize = true,
