@@ -31,7 +31,7 @@ function Treeview(props:treeViewProps) {
   const dimensional = (
     arrs:Array<treeType>
     )=>{
-        // 将新的数据重构为一维数组,
+        // 将新的数据重构为一维数组
         setOneTreeDate((ele)=>{
           let newArr = [...arrs]
           let arr:Array<treeType> = [];
