@@ -85,7 +85,7 @@ export default function Demo(props: any): Swiper {
   return (
     <div style={{ height: height, width: width }} className="rotation">
       <button className="lt" onClick={leftTo}>
-        左边
+      &lt;
       </button>
       <ul
         className="rotationBox"
@@ -111,7 +111,7 @@ export default function Demo(props: any): Swiper {
         </li>
       </ul>
       <button className="rt" onClick={rightTo}>
-        右边
+      &gt;
       </button>
     </div>
   );
