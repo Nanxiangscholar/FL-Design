@@ -11,7 +11,6 @@ mobile: false
 
 轮播
 
-使用：求我就告诉你😁
 
 ## 基本样式
 <code src='./demo/index1.jsx'></code>
