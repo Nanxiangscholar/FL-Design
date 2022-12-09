@@ -1,7 +1,5 @@
 
-interface ReactNode{
-    a:any;
-}
+type ReactNode=any
 
 export  interface Props {
     /**
@@ -21,7 +19,7 @@ export  interface Props {
      * 需要监听滚动事件的目标元素
      * @default Window
     */
-     target:HTMLElement | Window | Document  ;
+     target:HTMLElement | Window | Document|any;
 
     /**
      * 滚动距离大于该参数时才会显示按钮
